@@ -4,3 +4,7 @@ Repository di supporto per il progetto del corso @sistemi intelligenti per inter
 Realizzazione di un sistema di raccomandazione di film.
 
 DATASET: [@MovieLens](https://grouplens.org/datasets/movielens/) 
+
+<div align="center">
+  <img src="https://github.com/mariocuomo/progettoSII/blob/main/sito.png">
+</div>
