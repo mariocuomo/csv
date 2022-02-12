@@ -8,5 +8,6 @@ Questa cartella contiene diversi notebooks jupyter esplicativi.
 - [ ] [_predizione item based_](https://github.com/mariocuomo/progettoSII/blob/main/notebooks%20jupyter/item%20based%20predizione.ipynb)<br>
       mostra come è possibile effettuare una raccomandazione a un utente applicando il metodo _**item-based collaborative filtering**_.
 - [ ] [_film con maggiore entropia_](https://github.com/mariocuomo/progettoSII/blob/main/notebooks%20jupyter/film%20con%20maggiore%20entropia.ipynb)<br>
-      mostra come è possibile recuperare i film che hanno maggiore entropia - pareri contrastanti. Questi sono quelli con **maggiore contenuto informativo**_.
+      mostra come è possibile recuperare i film che hanno maggiore entropia - pareri contrastanti.<br>
+      Questi sono quelli con _**maggiore contenuto informativo**_.
 - [ ] ...
