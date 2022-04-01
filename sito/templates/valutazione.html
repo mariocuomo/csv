@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='valutazione.css') }}">
+    <title>VALUTAZIONE</title>
+    <link href="{{ url_for('static',filename='favicon.ico') }}" rel="shortcut icon" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+    <style>
+        th, td {
+        padding : 10px;
+        border : 1px solid #666;
+        }
+        thead {
+            align-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="row">
+        <div class="column left" style="border-right: 4px solid rgba(88, 216, 13, 0.507);">
+            <h2>VALUTAZIONE APPROCCIO USER BASED WITHOUT MEAN RATING</h2>
+            <h3>RATING DELL'UTENTE {{utente}}</h2>
+
+            <table id="customers">
+                <tr>
+                    <th>FILM</th>
+                    <th>RATING UTENTE</th>
+                    <th>RATING USER BASED NO MEANS</th>
+                    <th>RATING USER BASED</th>
+                    <th>RATING ITEM BASED</th>
+                </tr>
+                {% for x in rating %}
+                    <tr>
+                        <td>{{ x[0] }}</td>
+                        <td>{{ x[1] }}</td>
+                        <td>{{ x[2] }}</td>
+                        <td>{{ x[3] }}</td>
+                        <td>{{ x[4] }}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+        <div class="column right">
+            <p><b>Mean Absolute Error</b> (MAE): {{mae}}</p>
+            <p><b>Root Mean Square Error</b> (RMSE): {{rmse}}</p>
+            <p style="padding-bottom: 10px;"><b>Normalized MAE</b> (NMAE): {{nmae}}</p>
+            
+            <hr style="border: thin solid rgba(88, 216, 13, 0.507);" >
+
+            <form action="/" style="padding-bottom: 10px; padding-top: 10px;">
+				<input type="submit" value="TORNA AL SISTEMA"/>
+			</form>
+        </div>
+    </div>
+
+</body>
+</html>
