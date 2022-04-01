@@ -9,6 +9,8 @@ Studio dell'approccio collaborative filtering - **item e user based**.
 
 DATASET: [@MovieLens](https://grouplens.org/datasets/movielens/) 
 
+
+
 <div align="center">
-  <img src="https://github.com/mariocuomo/progettoSII/blob/main/sito.png">
+  <img src="https://github.com/mariocuomo/progettoSII/blob/main/esempio.gif" width="725" height="400" />
 </div>
