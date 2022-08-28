@@ -27,7 +27,6 @@ df_film = pd.read_csv(urlFilm)
 rating_matrix = pd.read_csv(urlRating).pivot(index = 'userId', columns = 'movieId', values = 'rating')
 
 
-
 @app.route("/")
 def index():
     return render_template('index.html')
@@ -113,7 +112,6 @@ def selezionaUtente():
                                 sim=round(similarita2-0.2, 1)
                                 )
 
-
 @app.route("/valutazione", methods=["GET", "POST"])
 def valutazione():
     user = session.get('idUtente', None)
@@ -127,6 +125,7 @@ def valutazione():
     #split dei dati in train e test
     X_train, X_test = train_test_split(df, test_size = 0.2, random_state = 42)
 
+
     #=======
     # TRAIN
     #=======
@@ -136,6 +135,7 @@ def valutazione():
     #matrice di correlazione tra utenti
     correlation_matrix = rating_matrix.transpose().corr(method='pearson')
     correlation_matrix[np.isnan(correlation_matrix)] = 0
+
 
     #=======
     # TEST
@@ -157,6 +157,7 @@ def valutazione():
     scaler = MinMaxScaler(feature_range = (0.5, 5))
     scaler.fit(test_final_predicted_ratings)
     test_final_predicted_ratings = scaler.transform(test_final_predicted_ratings)
+
 
     #=======
     # VALUTAZIONE

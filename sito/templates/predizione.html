@@ -132,8 +132,11 @@
 
               <hr style="border: 1px solid rgb(197, 99, 33);">
 
-              <p style="padding-bottom: 10px; padding-top: 10px;" id=form-prompt><b><a class="btn" href="{{ url_for('valutazione') }}" onclick="loading_circleValutazione();disableButton();">VALUTAZIONE</a> DEL SISTEMA DI RACCOMANDAZIONE</b></p>
-
+              <p style="padding-bottom: 10px; padding-top: 10px;" id=form-prompt><b>
+                CLICCA IL BOTTONE PER EFFETTUARE LA VALUTAZIONE DEL SISTEMA
+                <form action= {{ url_for('valutazione') }} method="POST" onsubmit="loading_circleValutazione();disableButton()">
+                      <input type="submit" value="VALUTA" class="btnn btn" />
+                </form>
               <div id="containerLoadingCircleValutazione" style="display: none; padding-top: 10px;" align="center">
                 <div class="loader" id="loader" align="center"></div> 
                 <div align="center">

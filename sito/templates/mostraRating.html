@@ -186,7 +186,11 @@
               <hr style="border: 1px solid lightblue;">
               <p style="padding-bottom: 10px; padding-top: 10px;" id=form-prompt><b><a class="btn" href="{{ url_for('spiegazione') }}">SCOPRI</a> COME AVVIENE LA PREVISIONE DEI RATING</b></p>
               <hr style="border: 1px solid lightblue;">
-              <p style="padding-bottom: 10px; padding-top: 10px;" id=form-prompt><b><a class="btn" href="{{ url_for('valutazione') }}" onclick="loading_circleValutazione();disableButton();">VALUTAZIONE</a> DEL SISTEMA DI RACCOMANDAZIONE</b></p>
+              <p style="padding-bottom: 10px; padding-top: 10px;" id=form-prompt><b>
+                CLICCA IL BOTTONE PER EFFETTUARE LA VALUTAZIONE DEL SISTEMA
+                <form action= {{ url_for('valutazione') }} method="POST" onsubmit="loading_circleValutazione();disableButton()">
+                      <input type="submit" value="VALUTA" class="btnn btn" />
+                </form>
               <div id="containerLoadingCircleValutazione" style="display: none; padding-top: 10px;" align="center">
                 <div class="loader" id="loader" align="center"></div> 
                 <div align="center">
@@ -210,7 +214,7 @@
                 <p>
                     Vuoi scoprire delle predizioni per te?<br>
                     <form action= {{ url_for('nuovoUtente') }} method="POST" onsubmit="disableButton()">
-                      <input type="submit" value="sì" class="btnn" />
+                      <input type="submit" value="Sì" class="btnn btn" />
                   </form>
                 </p>
 
